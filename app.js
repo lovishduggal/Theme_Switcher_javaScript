@@ -15,9 +15,9 @@ navigator.geolocation.getCurrentPosition((position) => {
   console.log(sunrise.getHours(), sunset.getHours());
 
   if (isDay(sunset, sunrise)) {
-    setTheme("colorLight");
+     setColor("colorLight");
   } else {
-    setTheme("colorDark");
+    setColor("colorDark");
   }
 
   // const nowHours = new Date().getHours()--> this gave me present time
@@ -35,11 +35,11 @@ function defColor() {
 }
 defColor();
 themeSelector.addEventListener("change", (e) => {
-  console.log(e.target.value);
+ 
   setColor(e.target.value);
 });
 function setColor(color) {
-  console.log(themeSelector.value);
+  
   themeSelector.value = color;
   document.documentElement.className = color;
 

@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+.colorLight {
+  --primary: #fff;
+  --secondary: whitesmoke;
+  --accent: #54c75b;
+  --font-color: #000;
+  --pure: #fff;
+}
+.colorDark {
+  --primary: #121212;
+  --secondary: #0b0b0b;
+  --accent: #54c75b;
+  --font-color: #fff;
+  --pure: #fff;
+}
+.colorOcean {
+  --primary: #252c35;
+  --secondary: #20272e;
+  --accent: #54c75b;
+  --font-color: #fff;
+  --pure: #fff;
+}
+
+.colorSepia {
+  --primary: #fbf1c7;
+  --secondary: #eadfb5;
+  --accent: #704214;
+  --font-color: #704214;
+  --pure: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  font-size: 18px;
+}
+body {
+  font-smooth: always;
+  font-family: "Nunito", sans-serif;
+
+  background: var(--primary);
+  color: var(--font-color);
+  transition: all 0.3s ease-in-out;
+}
+.container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+select {
+  padding: 5px 30px;
+  background: var(--secondary);
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  color: var(--font-color);
+}
+nav h1 {
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+.heroSection {
+  text-align: center;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+}
+.heroSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.heroSection p {
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.heroSection .left > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.twitter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: var(--pure);
+  background: var(--accent);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: block;
+}
+.twitter:hover {
+  border-color: var(--accent);
+  background: transparent;
+  color: var(--accent);
+}
+.twitter span {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.right img {
+  width: 100%;
+}
+@media (min-width: 675px) {
+  html {
+    font-size: 12px;
+  }
+  .heroSection {
+    grid-template-columns: 1.5fr 2fr;
+    align-items: center;
+    text-align: start;
+    grid-gap: 2rem;
+    grid-row: 0;
+  }
+  .heroSection .left > div {
+    justify-content: start;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 18px;
+  }
+  .heroSection {
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    text-align: start;
+
+    grid-gap: 3rem;
+  }
+}

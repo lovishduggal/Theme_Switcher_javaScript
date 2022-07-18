@@ -11,7 +11,7 @@ navigator.geolocation.getCurrentPosition((position) => {
     position.coords.longitude
   );
 
-  //this gave us india sunrise and sunset time :
+
   console.log(sunrise.getHours(), sunset.getHours());
 
   if (isDay(sunset, sunrise)) {
@@ -20,8 +20,7 @@ navigator.geolocation.getCurrentPosition((position) => {
     setColor("colorDark");
   }
 
-  // const nowHours = new Date().getHours()--> this gave me present time
-  //     console.log( nowHours )
+ 
 
   function isDay(sunset, sunrise) {
     const nowHours = new Date().getHours();
